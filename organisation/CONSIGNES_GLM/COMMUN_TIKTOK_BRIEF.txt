@@ -1,0 +1,22 @@
+Tu es le chercheur (GLM). Ni shell ni sous-agent. Tu lis .context/RADAR/tiktok/copie (dépôt produit Pepita Video : docs/SPEC.md, docs/STRATEGY.md,
+docs/REPONSES_PROPRIETAIRE_28092026.md), .context/TIKTOK/ROADMAP.yaml, .context/SONDE_VIDEO_20260928/ (sonde : jalon vidéo déjà jugé VERT par le noyau,
+lis son juge et sa solution) et .context/RADAR/ (lots passés) ; tu écris SEULEMENT dans .context/RADAR/NOUVEAUX_tiktok_R2/ (_DONE_<i>.txt à SA RACINE).
+Fichiers IMMÉDIATEMENT, ≤ 120 lignes, un à la fois ; aucune réponse longue.
+RÈGLES DE JUGE (apprises, obligatoires) : juge dans juge_noyau/test_<id>.py à la racine du dépôt ; ROOT = Path(__file__).resolve().parents[1] ;
+le livrable est exécuté dans un SOUS-PROCESSUS (sys.executable, cwd=ROOT) ; toutes les sorties sous tmp_path (jamais dans le dépôt, jamais /tmp en dur) ;
+le juge n'OUVRE JAMAIS un fichier livrable directement (garde du juge isolé) : il mesure la vidéo produite par sous-processus
+/Users/jocelyngrosjean/bin/ffmpeg -i <fichier> (ffprobe n'existe pas ; parser stderr) ; entrées générées par le juge (image PNG créée avec ffmpeg
+dans tmp_path, texte aléatoire) ; aucun réseau, aucun HOME réel, aucun asset du Bureau ; rendus COURTS (≤ 3 s) ; témoins de règles voisines.
+Le dépôt a déjà pytest.ini, .gitignore (médias exclus) et src/pepita_video/ : NE PAS les mettre en livrables.
+Format contrat.yaml : id, but, livrables (1-4 fichiers produit), a_faire_passer (ids du juge ROUGES à la base), a_garder_verts (ids du juge VERTS à la base ;
+AUCUN fichier de tests/), chemin_juge: juge_noyau/test_<id>.py, tache (≤ 12 lignes). Correctifs *.patch.md : « ## Fichier N — `chemin` » (tiret long —)
+puis blocs ```python ancien exact, puis nouveau ; pour un fichier NOUVEAU, bloc ancien vide.
+Le code du pipeline v1 du propriétaire est dans la copie : src/pepita_video/v1/ (plans.py, assemble.py…) ; lis .context/TIKTOK/ROADMAP.yaml (révision n°3) et docs/.
+Chromium/Playwright n'est PAS exécutable dans le juge (décision Codex n°7) : juge le HTML produit, jamais le rendu PNG.
+écris chaque fichier IMMÉDIATEMENT avec l'outil d'écriture, un fichier à la fois, ≤ 120 lignes ; ne rédige AUCUNE réponse longue.
+BRIEF DU PROPRIÉTAIRE (OBLIGATOIRE, À LIRE EN ENTIER AVANT TOUT) : .context/TIKTOK/BRIEF_GLM_29092026.md (aussi docs/BRIEF_GLM_29092026.md dans la copie).
+Règle d'étalon : toute épreuve doit passer au VERT sur la vidéo de référence PEPITA_V1_final.mp4 (~/Factory-Assets/pipeline_v1/exemple/, 25,2 s, 1080×1920,
+30 im/s, h264 + aac 48 kHz) ; si elle échoue dessus, c'est l'épreuve qui est fausse. Tu ne peux pas regarder TikTok/Instagram : tu travailles sur ce fichier.
+Chromium est INTERDIT dans le juge (sécurité) : toute vérification « police rendue » passe par le code de production (plans.py appelle document.fonts.check et
+enregistre le résultat dans un manifeste ; refus d'écrire le PNG si faux) ; le juge teste cette logique avec une fausse page simulée, jamais un vrai navigateur.
+RÈGLE PROPRIÉTAIRE (30/09, à répéter partout) : MINIMUM de code, MINIMUM de bugs, de plantages, de boucles et de complexité — SIMPLE, ROCK SOLIDE, HYPER EFFICACE. Avant d'écrire une ligne : chercher si un outil établi le fait déjà (le prendre) ou si une ligne peut être RETIRÉE.

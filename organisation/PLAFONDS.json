@@ -1,0 +1,311 @@
+{
+ "pose": "28/09/2026 13:2x Bangkok, pilote Claude, ordre propriétaire",
+ "regle": "plafond = taille au jour de la pose ; ne descend que ; relever = décision propriétaire (champ releve) ; pièces du noyau et de la mini-factory suivies via ACTIF/ (la pièce EN SERVICE, quelle que soit sa version) ; 28/09 14:4x : plafonds PAR VERSION (RELEASES/vN/…) — basculer ACTIF ne touche aucun plafond, le retour arrière reste possible",
+ "releve": [
+  {
+   "date": "28/09/2026 15:2x Bangkok",
+   "par": "propriétaire (« il faudrait passer au nouveau noyau et à la mini factory »)",
+   "quoi": "ajout des pièces RELEASES/v8 à leur taille actuelle (mf.py 160 contre 113 en v6 : contrôles exigés par Codex)",
+   "total": "1583 → 2678"
+  },
+  {
+   "date": "28/09 16:0x",
+   "par": "propriétaire (« on avance avec Claude »)",
+   "quoi": "nouvelle pièce claude_restreint.sh",
+   "total": "2678 → 2693"
+  },
+  {
+   "date": "28/09 16:3x",
+   "par": "propriétaire (« intègre tout ça avec le minimum de code »)",
+   "quoi": "tableau.py, relire.py (nouvelles) ; accepter +2 (règle 1 taille→moteur), integrer +6 (veto relecture, instables)",
+   "total": "2693 → 2773"
+  },
+  {
+   "date": "28/09 16:4x",
+   "par": "propriétaire (« intègre tout ça… amélioration run après run automatique, code ultra minimal »)",
+   "quoi": "integrer +8 (--manifeste, avance de la copie), usine +2 (boucle tableau→relecture→intégration) +0 (reprise T)",
+   "total": "2773 → 2785"
+  },
+  {
+   "date": "28/09 16:5x",
+   "par": "propriétaire (même ordre)",
+   "quoi": "integrer +2 : juge d'empilement rejoué, écarté seulement si ≥2 rouges/3 (faux INCOMPATIBLE mesurés JO_N1, JO_T4B)",
+   "total": "2785 → 2787"
+  },
+  {
+   "date": "28/09 17:0x",
+   "par": "propriétaire (« on peut mettre codex en relecture croisée aussi »)",
+   "quoi": "relire.py rotation glm/claude/codex",
+   "total": "2785 → 2787"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "pilote",
+   "quoi": "v6 retirée des plafonds (plus un retour arrière) ; v9 posée à sa taille mesurée ; total non relevé"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "pilote",
+   "quoi": "v8 retirée des plafonds (retour arrière = v9) ; v10 posée à sa taille mesurée ; total non relevé"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "propriétaire (« rajoute tout ce qui manque », vidéos)",
+   "quoi": "+10 : RADAR/suivre_run.sh, suivi en direct lecture seule"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "pilote (propriétaire : « à fond »)",
+   "quoi": "+1 accepter_jalon.py : fichier neuf dans un dossier absent (TK_5, TK_7, OUT_1 : 3 plantages constatés) ; OUT_2 (correction par la factory) a échoué 2× côté GLM"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "pilote (contre-audit Codex n°11 + Claude)",
+   "quoi": "+2 accepter_jalon.py : chemins absolus/.. refusés ; cible résolue dans la copie ; ancien vide ⇔ fichier absent (+1 : ligne scindée pour ≤ 120 car.)"
+  },
+  {
+   "date": "2026-09-29",
+   "par": "propriétaire (« c'est TikTok qu'il faut build »)",
+   "quoi": "+1 integrer.py : produit tiktok → ~/pepita-video"
+  },
+  {
+   "date": "2026-09-30",
+   "par": "propriétaire (« pourquoi pas la dernière version ? »)",
+   "quoi": "v9 retirée des plafonds ; v11 posée ; retour arrière = v10 ; total +1 (mf.py v11 = v9 + 1 ligne : retrait propre d'un jalon)"
+  },
+  {
+   "date": "30/09/2026 16:45 Bangkok",
+   "par": "propriétaire (« Les plafonds de taille : on les applique à tous les scripts, à leur taille actuelle ? » → « Yes » ; « Codex reprend puis Claude après Codex »)",
+   "quoi": "31 pièces ajoutées ou relevées à leur taille actuelle (tous les scripts RADAR, glm_restreint, ESSAI_TEMOIN) ; chaine_mf.sh relevé pour le repli GLM→Codex→Claude",
+   "total": "2586 → 3479",
+   "quota_note": "chaine_mf.sh 28 lignes après découpe des lignes longues"
+  },
+  {
+   "date": "30/09/2026 18:14 Bangkok",
+   "par": "propriétaire (« pourquoi je dois te relancer pour que tu t'en rendes compte ? » ; « pourquoi le système ne s'en rend pas compte tout seul ») — ordre permanent du 30/09 : « le système doit se rendre compte seul, fixer puis relancer »",
+   "quoi": "sentinelle.sh 20→26 lignes (9→15 longues) : détection du TAUX DE REFUS (≥ 4 et > 50 % en 3 h → diagnostic GLM automatique) et resynchronisation automatique de la copie usine",
+   "total": "3481 → 3487"
+  },
+  {
+   "date": "30/09/2026 18:15 Bangkok",
+   "par": "propriétaire (« tout doit fonctionner de façon fluide, s'améliorer, s'optimiser et continuer dans le bon sens sans s'arrêter »)",
+   "quoi": "lot_glm_decoupe.sh (19, 9)→(20,10) : un REFUS à l'acceptation lance automatiquement la boucle de correction GLM (une fois)",
+   "total": "3487 → 3488"
+  },
+  {
+   "date": "30/09/2026 18:16 Bangkok",
+   "par": "propriétaire (« check toi-même toutes les 30 min ou 1 h que ça délivre »)",
+   "quoi": "nouvelle pièce controle_horaire.sh (15 l.) : résumé machine pour le contrôle horaire du pilote",
+   "total": "3488 → 3503"
+  },
+  {
+   "date": "30/09/2026 18:20 Bangkok",
+   "par": "propriétaire (« remets tout sur les bons rails une bonne fois pour toutes, que ça bombarde dans le bon sens »)",
+   "quoi": "cause commune des refus prouvée (bloc « ancien » trouvé 0 fois dans la version de référence) : refus précis par cause (accepter_jalon) + consigne « code de référence = RADAR/<P>/copie » (lot_glm_decoupe, corriger_lot_glm) ; accepter_jalon.py 129→131 ; lot_glm_decoupe.sh 20→20 ; corriger_lot_glm.sh 16→17",
+   "total": "3503 → 3506"
+  },
+  {
+   "date": "30/09/2026 19:12 Bangkok",
+   "par": "propriétaire (« il faut fixer ça aussi rapidement ; le noyau et la mini-factory doivent être laser »)",
+   "quoi": "bogue accepter_jalon (id entre guillemets jamais retrouvé → doublons ROADMAP, hash périmé) + consigne de correction « juge rejoué dans le bac du noyau » ; accepter_jalon.py 131→132 ; corriger_lot_glm.sh 17→18",
+   "total": "3506 → 3508"
+  },
+  {
+   "date": "30/09/2026 22:18 Bangkok",
+   "par": "propriétaire (« Faire relire les étapes bloquées par Codex toutes les 3 heures (quand il y en a au moins 2) ? … oui »)",
+   "quoi": "relecture_bloques.sh (10, 3)→(14,3) : cadence 3 h, ≥ 2 bloqués jamais construits, seuil Codex 85 %",
+   "total": "3508 → 3512"
+  },
+  {
+   "date": "30/09/2026 22:22 Bangkok",
+   "par": "suite de la décision propriétaire « Codex toutes les 3 h » (30/09 22:0x)",
+   "quoi": "relecture_bloques.sh 14→15 : lecture seule de file.json (mf statut refusé pendant une chaîne rendait la relecture aveugle)",
+   "total": "3512 → 3513"
+  },
+  {
+   "date": "30/09/2026 23:16 Bangkok",
+   "par": "propriétaire (« trouve la cause commune pour que ça fuse »)",
+   "quoi": "cause commune des échecs de construction (diag GLM, vérifiée) : la matrice jouait le juge hors isolement → matrice rejouée via juge_isole.py comme le noyau (prouvé : juge fautif TK_2VR2 refusé, juge sain TK_T3 accepté) + consigne de correction PermissionError ; accepter_jalon.py 132→133 ; corriger_lot_glm.sh 18→19",
+   "total": "3513 → 3515"
+  },
+  {
+   "date": "01/10/2026 00:06 Bangkok",
+   "par": "propriétaire (« ça avance et tourne autopilot ? » ; « combien de temps pour Mailbox et le drive cleaner »)",
+   "quoi": "trou d'autopilote : personne ne préparait les étapes suivantes (SaveSpace à l'arrêt depuis 19:13) → vague_auto.sh (nouveau) + appel par la sentinelle (produit sans étape prête → GLM écrit les 2 suivantes, 1 fois / 2 h)",
+   "total": "3515 → 3531"
+  },
+  {
+   "date": "01/10/2026 00:14 Bangkok",
+   "par": "propriétaire (« pourquoi on ne prévoit pas toutes les étapes dès le début, bien détaillées, comme un vrai CTO ? » ; « il ne faut jamais que ça s'arrête »)",
+   "quoi": "vague_auto.sh +2 : les consignes reprennent le PLAN_DETAILLE.md du produit",
+   "total": "3531 → 3533"
+  },
+  {
+   "date": "01/10/2026 00:19 Bangkok",
+   "par": "propriétaire (« possible de tester et se comparer ? parfois l'IA seule va plus vite et consomme moins ; tout est mesuré ? »)",
+   "quoi": "ombre_seul.sh (nouveau) : bras IA seule en ombre sur chaque étape construite, notée par le même juge dans le même isolement → OMBRE.jsonl ; déclenché par la sentinelle, 1 à la fois",
+   "total": "3533 → 3557"
+  },
+  {
+   "date": "01/10/2026 00:22 Bangkok",
+   "par": "propriétaire (« on écarte l'ancienne factory mais on fait tout le reste, oui » : tableau de bord + 3e camp)",
+   "quoi": "tableau_bord.py (nouveau) : Obsidian TABLEAU_DE_BORD.md depuis les reçus, mis à jour à chaque contrôle horaire",
+   "total": "3557 → 3583"
+  },
+  {
+   "date": "01/10/2026 00:33 Bangkok",
+   "par": "propriétaire (« oui » au 3e camp ; « si d'autres outils fonctionnent mieux, autant les intégrer ou les utiliser en direct »)",
+   "quoi": "ombre_msa.sh (nouveau) : mini-swe-agent + GLM dans la VM, même tâche, même juge → OMBRE_MSA.jsonl ; sentinelle le lance après l'ombre IA seule ; tableau de bord à 3 camps",
+   "total": "3583 → 3600"
+  },
+  {
+   "date": "01/10/2026 00:59 Bangkok",
+   "par": "propriétaire (« ça enchaîne bien ? » — ordre permanent : ne jamais s'arrêter)",
+   "quoi": "accepter_jalon.py +1 : tout plantage de l'acceptation devient un REFUS motivé (sinon silence : pas de correction auto, lot coincé — DN0C, DN1A)",
+   "total": "3600 → 3601"
+  },
+  {
+   "date": "01/10/2026 01:10 Bangkok",
+   "par": "propriétaire (« garde un œil sur le build toutes les heures comme si je te reposais la question »)",
+   "quoi": "controle_horaire.sh +2 : lots coincés en silence et refus après correction",
+   "total": "3601 → 3603"
+  },
+  {
+   "date": "01/10/2026 01:10 Bangkok",
+   "par": "propriétaire (« sans cramer du quota Claude dans le vent »)",
+   "quoi": "controle_horaire.sh : VERDICT MACHINE RAS / À REGARDER — le pilote Claude ne creuse que sur anomalie",
+   "total": "3603 → 3606"
+  },
+  {
+   "date": "01/10/2026 05:01 Bangkok",
+   "par": "propriétaire (« ça a bien avancé ? » — ordre permanent : ne jamais tourner en boucle)",
+   "quoi": "vague_auto.sh : BOUCLE constatée (BN0C→BN0H, DN0C→DN0G : le planificateur réécrivait la même étape bloquée sous un nouvel ID) → ne réécrit plus une étape qui a déjà un jalon ; pas de nouvelle vague si ≥ 4 bloqués en attente",
+   "total": "3606 → 3607"
+  },
+  {
+   "date": "01/10/2026 05:03 Bangkok",
+   "par": "propriétaire (« si je n'avais pas relancé ça serait resté arrêté, c'est pas possible »)",
+   "quoi": "relecture_bloques.sh : déblocage AUTOMATIQUE si Codex ET GLM (2 familles) disent DÉBLOQUER, ID demandé, encore bloqué, jamais construit — ne dépend plus du pilote Claude ni de la session",
+   "total": "3607 → 3621"
+  },
+  {
+   "date": "01/10/2026 08:33 Bangkok",
+   "par": "propriétaire (« ok fais tt » leviers 4+5 ; « Maintenant (recommandé) » mise en service v13 ; « ne pose jamais de question … tu enchaînes »)",
+   "quoi": "v13 = v11 + CORR_1 (violations avant panne, panne moteur = ABORT sans essai) + flock + levier 5 (noms des tests rouges du dernier essai, sans paramètres) + départage ; GO Codex final (B2Q), 216/216, mutation 75/75 ×2 ; run.py 696→704 (+8)",
+   "total": "3619 → 4605"
+  },
+  {
+   "date": "01/10/2026 08:37 Bangkok",
+   "par": "propriétaire (« démarre » — une étape prête ne doit jamais attendre l'enchaîneur ; « enchaîne direct »)",
+   "quoi": "lot_glm_decoupe.sh +1 ligne : étape ACCEPTÉE → chaîne du produit lancée tout de suite si aucune ne tourne ; sentinelle : même lancement direct au lieu de kickstart après 45 min (0 ligne) ; vague_auto : seuil ≥4 bloqués limité aux bloqués de moins de 6 h (0 ligne)",
+   "total": "4605 → 4606"
+  },
+  {
+   "date": "01/10/2026 11:35 Bangkok",
+   "par": "propriétaire (« on a quand même optimisé pour baisser du code ? »)",
+   "quoi": "17 scripts morts (aucune référence vivante, vérifié par grep) → MUSEE_ORCHESTRATION/scripts_morts_20261001 : usine_nuit2.sh, recalcul.py, tableau.py, relire.py, suivre_run.sh, acceptation_jrg2.sh, acceptations_2.sh, acceptations_suite.sh, acceptations_tw.sh, accepter_lot.sh, file_job.sh, matrice_juge.py, rejeux_bn.py, relance_corrections.sh, relecture_bloques.sh, reprise_glm.sh, usine_nuit.sh",
+   "total": "4606 → 4228"
+  },
+  {
+   "date": "01/10/2026 12:20 Bangkok",
+   "par": "propriétaire (« notre code est énorme, je pensais 2500 lignes »)",
+   "quoi": "releases v6/v8/v9/v10 → MUSEE_ORCHESTRATION/releases_anciennes (v11 reste le secours, v13 en service) ; RELEASES/v10/noyau/factory_v3/run.py, RELEASES/v10/noyau/factory_v3/support.py, RELEASES/v10/noyau/factory_v3/juge_isole.py, RELEASES/v10/mini_factory/mf.py",
+   "total": "4228 → 3250"
+  },
+  {
+   "date": "01/10/2026 12:40 Bangkok",
+   "par": "propriétaire (« enchaîne, le plus rapidement possible un noyau et mini factory banger prouvé » ; cible 11 pièces)",
+   "quoi": "enchaineur_absence.sh retiré (doublon : sentinelle + démarrage immédiat lancent les chaînes ; disque gardé par le noyau ; pCloud = com.factory.backup) ; revue quotidienne déplacée dans sentinelle (+1 ligne longue) ; agent launchd com.factory.enchaineur retiré",
+   "total": "3250 → 3215"
+  },
+  {
+   "date": "01/10/2026 16:52 Bangkok",
+   "par": "propriétaire (« fix tout puis enchaîne » ; panne moteur qui brûlait les essais)",
+   "quoi": "v14 = v13 + panne moteur ≠ essai (noyau : 0 fichier ET aucun travail prouvé ; mf : démarrage technique, 3 max ; HOME moteur gardé sur panne) ; GO Codex B6ter, 232/232, mutation 82/82 ×2 (+2 tests du juge pour 2 mutants survivants)",
+   "total": "3215 → 4205"
+  },
+  {
+   "date": "01/10/2026 16:54 Bangkok",
+   "par": "opérateur (v14 en service, v13 = secours)",
+   "quoi": "RELEASES/v11 → musée",
+   "total": "4205 → 3227"
+  }
+ ],
+ "pieces": {
+  "RADAR/accepter_jalon.py": 134,
+  "RADAR/integrer.py": 238,
+  "RADAR/chaine_mf.sh": 28,
+  "RADAR/debloquer_quota.py": 16,
+  "RADAR/creer_jeton_claude.sh": 29,
+  "RADAR/jeton_presse_papier.sh": 13,
+  "RADAR/verifier_plafonds.py": 16,
+  "CLOTURE_20260927/claude_restreint.sh": 15,
+  "CLOTURE_20260927/glm_restreint.sh": 18,
+  "ESSAI_TEMOIN/controle.sh": 63,
+  "ESSAI_TEMOIN/noyau.sh": 220,
+  "ESSAI_TEMOIN/nuit_essai.sh": 28,
+  "ESSAI_TEMOIN/nuit_essai2.sh": 15,
+  "ESSAI_TEMOIN/temoin.sh": 168,
+  "RADAR/.import_fork.sh": 10,
+  "RADAR/.socle_produits.sh": 11,
+  "RADAR/corriger_lot_glm.sh": 19,
+  "RADAR/indexer_etudes.py": 24,
+  "RADAR/lancer.sh": 4,
+  "RADAR/lot_glm_decoupe.sh": 19,
+  "RADAR/relanceur.sh": 12,
+  "RADAR/remplacer.sh": 7,
+  "RADAR/revue_periodique.sh": 6,
+  "RADAR/sentinelle.sh": 30,
+  "RADAR/verrouiller.sh": 7,
+  "RADAR/controle_horaire.sh": 21,
+  "RADAR/vague_auto.sh": 18,
+  "RADAR/ombre_seul.sh": 22,
+  "RADAR/tableau_bord.py": 26,
+  "RADAR/ombre_msa.sh": 14,
+  "RELEASES/v13/noyau/factory_v3/run.py": 704,
+  "RELEASES/v13/noyau/factory_v3/support.py": 96,
+  "RELEASES/v13/noyau/factory_v3/juge_isole.py": 37,
+  "RELEASES/v13/mini_factory/mf.py": 149,
+  "RELEASES/v14/noyau/factory_v3/run.py": 705,
+  "RELEASES/v14/noyau/factory_v3/support.py": 96,
+  "RELEASES/v14/noyau/factory_v3/juge_isole.py": 37,
+  "RELEASES/v14/mini_factory/mf.py": 152
+ },
+ "total": 3227,
+ "longues_160": {
+  "RADAR/accepter_jalon.py": 15,
+  "RADAR/integrer.py": 3,
+  "RADAR/chaine_mf.sh": 0,
+  "RADAR/debloquer_quota.py": 2,
+  "RADAR/creer_jeton_claude.sh": 0,
+  "RADAR/jeton_presse_papier.sh": 1,
+  "RADAR/verifier_plafonds.py": 2,
+  "CLOTURE_20260927/claude_restreint.sh": 1,
+  "CLOTURE_20260927/glm_restreint.sh": 3,
+  "ESSAI_TEMOIN/controle.sh": 5,
+  "ESSAI_TEMOIN/noyau.sh": 4,
+  "ESSAI_TEMOIN/nuit_essai.sh": 7,
+  "ESSAI_TEMOIN/nuit_essai2.sh": 4,
+  "ESSAI_TEMOIN/temoin.sh": 2,
+  "RADAR/.import_fork.sh": 2,
+  "RADAR/.socle_produits.sh": 2,
+  "RADAR/corriger_lot_glm.sh": 8,
+  "RADAR/indexer_etudes.py": 1,
+  "RADAR/lancer.sh": 1,
+  "RADAR/lot_glm_decoupe.sh": 9,
+  "RADAR/relanceur.sh": 0,
+  "RADAR/remplacer.sh": 1,
+  "RADAR/revue_periodique.sh": 0,
+  "RADAR/sentinelle.sh": 20,
+  "RADAR/verrouiller.sh": 2,
+  "RADAR/controle_horaire.sh": 9,
+  "RADAR/vague_auto.sh": 8,
+  "RADAR/ombre_seul.sh": 9,
+  "RADAR/tableau_bord.py": 3,
+  "RADAR/ombre_msa.sh": 7,
+  "RELEASES/v14/noyau/factory_v3/run.py": 21,
+  "RELEASES/v14/noyau/factory_v3/support.py": 0,
+  "RELEASES/v14/noyau/factory_v3/juge_isole.py": 0,
+  "RELEASES/v14/mini_factory/mf.py": 2
+ }
+}
